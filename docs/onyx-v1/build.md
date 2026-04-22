@@ -354,6 +354,57 @@ No datasheet was available for the Gebildet DC geared motors. Stall current, no-
 
 ---
 
+# Full Assembly
+
+This section shows the complete submarine — internal chassis loaded into the hull tube, with both lids in place.
+
+---
+
+## Images
+
+### Plan View — Chassis Inside Hull
+
+![Full assembly, plan view](images/20260421_222222.jpg)
+*Top-down view of the internal chassis seated inside the clear acrylic hull tube. The syringe runs along the centre axis. The power bank is visible to the left, the PCB to the right. The lid panels extend beyond each end of the tube.*
+
+---
+
+### Bow End — Lid and Internal Components
+
+![Full assembly, bow end](images/20260421_222228.jpg)
+*View into the bow end of the assembled hull. The flat acrylic lid is in place, with the Schrader valve and syringe tube penetration visible at the bottom. The syringe piston dome protrudes from the chassis. The LEGO frame, wiring, and lead shot ballast pouch are visible inside the tube.*
+
+---
+
+### Aft End — Propulsion Gear Train Through Hull
+
+![Full assembly, aft end](images/20260421_222235.jpg)
+*View into the aft end of the assembled hull. The propulsion gear reduction stage is prominent, with the large LEGO turntable gear and smaller driven gear visible. The yellow motor mounts and red LEGO frame structure are visible behind. The ballast tube loops around the inside of the tube.*
+
+---
+
+### Side View — Complete Submarine
+
+![Full assembly, side view](images/20260421_222243.jpg)
+*Side view of the complete assembled submarine on the test board. The ballast actuator and electronics occupy the left (bow) end, with the motor driver board visible through the clear tube wall. The power bank and syringe fill the centre. The propulsion gear train is visible at the right (aft) end.*
+
+---
+
+## Issues
+
+### Ballast Distribution — Uneven, Causing Tilt
+
+With the internal chassis filling most of the tube diameter, there was no practical way to distribute the lead shot ballast evenly around the centre of gravity. The weight ended up unevenly placed, causing the submarine to tilt rather than sit level in the water.
+
+---
+
+## Next Build — Full Assembly Improvements
+
+- [ ] **Ballast floor:** Design a dedicated floor panel that sits at the bottom of the hull tube. All ballast (lead shot or equivalent) is packed below the floor, evenly distributed along the length. The internal chassis sits on top of the floor, keeping ballast and mechanism separate and the weight low and centred.
+- [ ] **Chassis clearance:** Size the chassis to slide in and out of the hull easily without needing to manipulate ballast or wiring — leave adequate clearance around the frame for practical handling.
+
+---
+
 # Annex / Notes
 
 ---

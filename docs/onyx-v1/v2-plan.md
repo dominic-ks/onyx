@@ -1,6 +1,6 @@
 # Onyx V2 — Forward Plan
 
-> Derived from V1 lessons, failures, and unresolved problems. This is a living document — update it as planning progresses.
+> Derived from the V1 build record, submersion testing, and unresolved problems. This is a living document — update it as planning progresses.
 
 ---
 
@@ -10,11 +10,12 @@ These are not optional. V2 cannot succeed without addressing these.
 
 | # | Issue | Source |
 |---|-------|--------|
-| 1 | Waterproofing reliability | F1, multiple tests |
-| 2 | Internal orientation must be resolved before layout | F2 |
-| 3 | Buoyancy and balance must be stable before propulsion testing | F3 |
-| 4 | Ballast system must be installed and validated | T5 incomplete |
-| 5 | Seal validation protocol needed (test before electronics go in) | lessons.md |
+| 1 | Waterproofing reliability | [build.md](./build.md), [tests.md](./tests.md) |
+| 2 | Underwater communication method must be chosen before control design | [build.md](./build.md), [tests.md](./tests.md) |
+| 3 | Buoyancy and balance must be stable before propulsion testing | [build.md](./build.md), [tests.md](./tests.md) |
+| 4 | Ballast system must be measured and validated | [build.md](./build.md), [tests.md](./tests.md) |
+| 5 | Seal validation protocol needed before electronics go in | [tests.md](./tests.md), [approach.md](./approach.md) |
+| 6 | Internal orientation must be resolved before layout | [approach.md](./approach.md) |
 
 ---
 
@@ -31,6 +32,7 @@ Things that would significantly improve V2 but aren't hard blockers:
 | Sealing | Redundant seal method | Glue + O-ring or gasket |
 | Assembly | Document assembly sequence | Prevent rework loops |
 | Testing | Run subsystem tests before integration | Bench → dry seal → wet seal → water |
+| Communication | Replace Bluetooth for underwater operation | Tether or acoustic method before real-time RC scope |
 
 ---
 
@@ -45,7 +47,7 @@ These need structured test entries in [tests.md](./tests.md) when executed:
 | Ballast range test | How much volume change is needed to submerge? |
 | Power draw measurement | Real runtime under load |
 | Stability test (ballast installed) | Can it hold a stable depth? |
-| IR range test underwater | Does IR penetrate water at operating distances? |
+| Underwater communication test | Does the chosen communication method work at operating depth and range? |
 | Orientation test | Confirm upside-down mount works mechanically |
 
 ---
@@ -54,7 +56,7 @@ These need structured test entries in [tests.md](./tests.md) when executed:
 
 Things V2 will need to answer that V1 didn't:
 
-- [ ] Does IR reliably work through the enclosure walls underwater?
+- [ ] What communication method will support the intended underwater control range?
 - [ ] What is the minimum ballast volume change needed for meaningful depth control?
 - [ ] What is the actual power draw under full operation?
 - [ ] Can the unit achieve neutral buoyancy with current weight budget?
@@ -74,6 +76,8 @@ Based on V1 experience, V2 should be designed around these rules:
 4. **Incremental testing** — bench → dry → static water → powered water
 5. **Document as you go** — don't rely on memory
 
+See [approach.md](./approach.md) for the project-level working method these principles come from.
+
 ---
 
 ## Backlog / Ideas
@@ -82,7 +86,8 @@ Low-priority items to consider for V2 or beyond:
 
 - [ ] Active depth hold (PID control with pressure sensor)
 - [ ] Camera integration
-- [ ] WiFi/BLE control instead of IR (range limitations of IR)
+- [ ] Wired tether as interim control method
+- [ ] Acoustic communication research for untethered control
 - [ ] 3D-printed custom enclosure
 - [ ] External ballast weight system (removable lead/tungsten)
 - [ ] LED status indicator (visible through enclosure)

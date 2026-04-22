@@ -1,1 +1,40 @@
-# onyx
+# Onyx
+
+Onyx is a small remote-controlled submarine project.
+
+The project is an iterative engineering build: each version is used to prove what works, expose what does not, and define the next version more clearly.
+
+It is not a polished product. The current documentation records the learning process as much as the finished hardware.
+
+---
+
+## Inspiration
+
+This project was inspired by the [Brick Experiment Channel RC Submarine 4.0](https://brickexperimentchannel.wordpress.com/2022/07/01/rc-submarine-4-0-hull-3-10/). The goal is to build a similar vessel using familiar technology and, where practical, parts and materials already on hand.
+
+---
+
+## Versions
+
+| Version | Status | Notes |
+|---------|--------|-------|
+| [Onyx V1](./docs/onyx-v1/README.md) | Complete / retired | Exploratory build used to identify the main physical, electrical, and testing constraints |
+
+---
+
+## Current Direction
+
+V1 showed that the main problems are physical rather than software-first:
+
+- Waterproofing and seal validation.
+- Buoyancy and trim.
+- Ballast control.
+- Underwater communication.
+- Internal packaging and maintainability.
+
+V2 planning is captured in the V1 documentation because it comes directly from the V1 build and test results:
+
+- [V1 build record](./docs/onyx-v1/build.md)
+- [Submersion testing record](./docs/onyx-v1/tests.md)
+- [V2 forward plan](./docs/onyx-v1/v2-plan.md)
+- [V2 project approach](./docs/onyx-v1/approach.md)

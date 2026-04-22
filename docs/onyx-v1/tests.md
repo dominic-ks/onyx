@@ -26,7 +26,10 @@ V1 should therefore be treated as complete. V2 should begin with empty-hull seal
 
 ### T1 — Initial Powered Submersion
 
-**Date:** [TBC]
+![The Onyx during the first submersion test](images/image.png)
+*The Onyx shortly after being placed in the water for the first time. You can see the heavy listing, which was largely due to difficulty distributing the ballast effectively as a result of general crampt conditions on board.*
+
+**Date:** [08/04/2026, 17:50 BST]
 
 **Goal:**
 Confirm whether the assembled submarine could be controlled while submerged.
@@ -35,114 +38,51 @@ Confirm whether the assembled submarine could be controlled while submerged.
 - Full V1 hull assembled with internal chassis installed.
 - Pi Pico, HC-05 Bluetooth module, motor driver, power bank, ballast syringe, and lead shot ballast fitted.
 - Control attempted from an Android phone using the SerialConnector app.
-- Environment, depth, and duration were not formally recorded.
 
 **Result:**
-Bluetooth control was lost as soon as the submarine submerged.
+Although the syringe ballast could be actuated, the submarine did not dive below the surface.
 
 **Observations:**
-- The electronics and control stack worked in air.
-- Submersion immediately removed the ability to control the vehicle in real time.
-- This changed the practical scope of V1 from a remotely controlled submarine to a short autonomous dive/resurface test platform.
+- The electronics and syringe actuator worked well.
+- The submarine was listing heavily in the water.
+- The syringe appeared around half full of air due to drawing it from the tube, it is still assumed that 40ml of water was successfully onboard, though this was not measured.
+- The submarine was observed to be taking on water, which may have been due to the hull seal, the Schrader valve, or both.
 
 **Conclusion:**
-Bluetooth is unsuitable for underwater control. V2 needs a different communication strategy before real-time underwater control can be treated as an objective.
+The definitive reason that the submarine did not submerge is not known, but the most likely cause is that the ballast was insufficient to overcome the buoyancy of the hull and internal components. The listing suggests that the ballast was also unevenly distributed, which would have made it harder to submerge.
 
 **Issues to Carry Forward:**
-- Choose communication method before V2 architecture is locked.
-- Treat underwater communication as a design constraint, not an implementation detail.
+- Must ensure ballast is sufficient to submerge the hull with all internal components installed.
+- Must design the internal layout to allow for even ballast distribution.
 
 ---
 
 ### T2 — Autonomous Dive / Resurface Attempt
 
-**Date:** [TBC]
+**Date:** [22/04/2026, 18:30 BST]
 
 **Goal:**
-Test whether the submarine could perform a simple dive and resurface cycle without maintaining live Bluetooth control underwater.
+To repeat the submersion test with the ballast more evenly distributed. 
 
 **Setup:**
-- Full V1 hull assembled.
-- Control logic modified so one command initiated an autonomous sequence: dive, hold for approximately 10 seconds, then resurface.
-- Syringe ballast actuator installed and driven by timed motor pulses.
+- As per test T1, but with the lead shot ballast distributed more evenly across the hull.
 
 **Result:**
-The workaround avoided the need for active underwater communication, but did not produce a stable, repeatable operating vehicle.
+There was still some listing, but considerably less than T1, however, there was no improvement in the submarine's ability to submerge.
 
 **Observations:**
-- The syringe actuator was the strongest mechanical success of V1.
-- Timed motor pulses were fragile because there were no physical end-stops.
-- The syringe travel was constrained to roughly half of its nominal 60ml capacity by the chassis layout.
-- The tube run contained air and was routed awkwardly through the hull.
+- The submarine was more balanced than in T1, but still not level.
+- The submarine did not submerge at all, even with the ballast syringe fully actuated.
+- The submarine was observed to be taking on water, which may have been due to the hull seal, the Schrader valve, or both.
+- The shrader valve was observed to be leaking air, when the syringe was actuated.
 
 **Conclusion:**
-The syringe ballast concept is worth carrying forward, but V2 needs proper travel limits, better tube routing, and measured displacement performance.
+The most likely reason that the submarine did not submerge is that the ballast was still insufficient to overcome the buoyancy of the hull and internal components. The listing suggests that the ballast was still unevenly distributed, which would have made it harder to submerge. The leaking Schrader valve may also have reduced the effective ballast.
 
 **Issues to Carry Forward:**
-- Add end-stop switches or equivalent hard limits.
-- Measure useful ballast volume rather than relying on syringe nominal capacity.
-- Design the ballast tube path before the chassis layout is fixed.
-
----
-
-### T3 — Seal and Gas Leakage Observations
-
-**Date:** [TBC]
-
-**Goal:**
-Observe whether the assembled hull maintained a watertight seal during submersion and ballast operation.
-
-**Setup:**
-- Full V1 hull assembled with acrylic tube, custom acrylic lids, O-ring seals, Schrader valve, and syringe tube penetration.
-- Ballast syringe operated while submerged.
-
-**Result:**
-The hull was not considered reliably sealed.
-
-**Observations:**
-- O-ring sealing remained an ongoing point of failure.
-- The Schrader valve allowed gas to pass during syringe operation; bubbles were observed when the syringe was being drawn out.
-- The syringe tube hole performed better than expected and appeared to seal by tube fit alone.
-- There is no recorded pressure or vacuum test data for the empty hull.
-
-**Conclusion:**
-V1 did not establish a validated waterproofing method. V2 must prove seal reliability on an empty hull before electronics are installed.
-
-**Issues to Carry Forward:**
-- Create a dedicated empty-hull seal test.
-- Test pressure or vacuum retention, not only static water contact.
-- Replace improvised O-ring placement with a controlled groove, gasket, or other repeatable sealing method.
-- Properly seal or replace the Schrader valve.
-
----
-
-### T4 — Buoyancy and Balance Observation
-
-**Date:** [TBC]
-
-**Goal:**
-Assess whether the assembled submarine sat level and behaved predictably in water.
-
-**Setup:**
-- Full V1 hull assembled with internal chassis and lead shot ballast.
-- Ballast placed around the remaining internal space rather than in a designed ballast compartment.
-
-**Result:**
-The submarine did not achieve stable, controlled balance.
-
-**Observations:**
-- The internal chassis occupied most of the tube diameter.
-- There was no proper ballast floor or separated ballast volume.
-- Lead shot placement was constrained and uneven.
-- The vehicle tilted rather than sitting level.
-
-**Conclusion:**
-V2 needs ballast distribution designed into the hull from the start. Balance cannot be solved reliably after the chassis fills the available volume.
-
-**Issues to Carry Forward:**
-- Add a dedicated low ballast floor or compartment.
-- Keep internal chassis clearance separate from ballast space.
-- Verify centre of gravity and centre of buoyancy before propulsion testing.
+- Must ensure ballast is sufficient to submerge the hull with all internal components installed.
+- Must design the internal layout to allow for even ballast distribution.
+- Must find a more reliable method of sealing the ballast water inside the hull, as the Schrader valve is not sufficient.
 
 ---
 

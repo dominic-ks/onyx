@@ -142,7 +142,7 @@ Getting the seals right proved difficult throughout, and they remained a point o
 | Parameter | Value |
 |-----------|-------|
 | Battery type | Mobile phone power bank |
-| Capacity | [TBC — check power bank label] |
+| Capacity | 500mAh |
 | Voltage | 5V (USB output) |
 | Estimated runtime | [TBC — not measured] |
 | Charging method | Standard USB recharge |
